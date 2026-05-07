@@ -65,20 +65,29 @@ hitl-chatbot/
 │       ├── services/
 │       │   └── chat_service.py  # Agent driving logic
 │       ├── core/
+│       │   └── nodes.py
+│       │   └── state.py
 │       │   └── graph.py         # LangGraph definition
 │       ├── memory/
 │       │   └── checkpointer.py  # Async checkpointer init/close
-│       └── tools/               # Registered agent tools (GitHub, LinkedIn)
+│       ├── tools/               # Registered agent tools (GitHub, LinkedIn)
+│       │   └── github_tool.py
+│       │   └── linkedin_tool.py
 │
 └── frontend/
     ├── app/
+    │   ├── globals.d.ts
     │   ├── layout.tsx           # Root layout (Inter font, dark bg)
     │   ├── page.tsx             # Entry point → renders ChatBox
     │   └── globals.css          # Tailwind directives + scrollbar styles
     ├── components/
-    │   └── ChatBox.tsx          # Full chat UI (sidebar, messages, input, approval)
+    │   └── ChatBox.tsx         # Full chat UI (sidebar, messages, input, approval)
+    │   ├──ApprovalCard.tsx
+    │   └──MessageBubble.tsx
     ├── tailwind.config.js
     ├── postcss.config.js
+    ├── next.config.js
+    ├── package.json
     └── tsconfig.json
 ```
 
