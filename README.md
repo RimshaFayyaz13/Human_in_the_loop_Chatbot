@@ -89,7 +89,7 @@ hitl-chatbot/
 ### Prerequisites
 - Node.js `>= 18`
 - Python `>= 3.11`
-- An OpenAI API key
+- A Groq API key
 
 ---
 
@@ -114,7 +114,7 @@ pip install -r requirements.txt
 Create a `.env` file in `backend/`:
 
 ```env
-OPENAI_API_KEY=sk-...
+GROQ_API_KEY=sk-...
 CORS_ORIGINS=http://localhost:3000
 # Optional
 GITHUB_TOKEN=ghp_...
